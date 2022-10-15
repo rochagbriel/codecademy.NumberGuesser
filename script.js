@@ -12,11 +12,17 @@ const generateTarget = () => {
 
 // This is a compair function
 const compareGuesses = (humanGuess, computerGuess, targetSecret) => {
+        if ((humanGuess > 9) || (humanGuess < 0)) {
+        return alert(`ERROR! 
+        Please select a number from 0 to 9.`);
+    }
+    { 
     if (Math.abs(humanGuess - targetSecret) <= Math.abs(computerGuess - targetSecret)) {
         return true;
     } else {
         return false;
     }
+}
 }
 // console.log(compareGuesses(1,2,6)) // Result should be "false"
 
